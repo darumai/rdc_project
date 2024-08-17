@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="rato.js" ></script>
+	<title>RDC v0.1</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container-fluid">
+	<h1>Rodent Distribution Calculator</h1>
+	<div>
+		<label for="food">Pick your desired food:</label>
+
+		<select name="food" id="food">
+			<option value="choc_milk_powder">Chocolate Milk Powder</option>
+		</select>
+	</div>
+	</div>
+
+	<div class="container-fluid">
+		<p>Select your spoon size:</p>
+		<div class="row" style="margin-left: 1%;">
+		<div style="margin-left: 0%;">
+		<h4>Coffee spoon</h4>
+		<p>Approximate dimensions: 125mm</p>
+		<input type="radio" id="coffee" name="spoon_type" value="HTML" checked>
+		<span class="et_pb_image_wrap "><img loading="lazy" width="243" height="60" src="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/coffee_spoon-1.jpg" alt="" title="" srcset="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/coffee_spoon-1.jpg 947w, https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/coffee_spoon-1-480x89.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 947px, 100vw" class="wp-image-2177" /></span>
+		</div>
+
+		<div style="margin-left: 0%;">
+		<h4>Dessert spoon</h4>
+		<p>Approximate dimensions: 190mm</p>
+		<input type="radio" id="dessert" name="spoon_type" value="HTML">
+		<span class="et_pb_image_wrap "><img loading="lazy" width="243" height="60" src="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/dessert_spoon-1.jpg" alt="" title="" srcset="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/dessert_spoon-1.jpg 947w, https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/dessert_spoon-1-480x118.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 947px, 100vw" class="wp-image-2180" /></span>
+		</div>
+
+		<div style="margin-left: 0%;">
+		<h4>Table spoon</h4>
+		<p>Approximate dimensions: 215mm</p>
+		<input type="radio" id="table" name="spoon_type" value="HTML">
+		<span class="et_pb_image_wrap "><img loading="lazy" width="243" height="60" src="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/table_spoon-1.jpg" alt="" title="" srcset="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/table_spoon-1.jpg 947w, https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/table_spoon-1-480x135.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 947px, 100vw" class="wp-image-2192" /></span>
+		</div>
+
+		<div style="margin-left: 0%;">
+		<h4>Tea spoon</h4>
+		<p>Approximate dimensions: 140mm</p>
+		<input type="radio" id="tea" name="spoon_type" value="HTML">
+		<span class="et_pb_image_wrap "><img loading="lazy" width="243" height="60" src="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/tea_spoon.jpg" alt="" title="" srcset="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/tea_spoon.jpg 947w, https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/tea_spoon-480x99.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 947px, 100vw" class="wp-image-2194" /></span>
+		</div>
+
+		<div style="margin-left: 0%;">
+		<h4>Soup spoon</h4>
+		<p>Approximate dimensions: 180mm</p>
+		<input type="radio" id="soup" name="spoon_type" value="HTML">
+		<span class="et_pb_image_wrap "><img loading="lazy" width="243" height="60" src="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/soup_spoon-1.jpg" alt="" title="" srcset="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/soup_spoon-1.jpg 947w, https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/soup_spoon-1-480x133.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 947px, 100vw" class="wp-image-2188" /></span>
+		</div>
+
+		<div style="margin-left: 0%;">
+		<h4>Ice cream spoon</h4>
+		<p>Approximate dimensions: 135mm</p>						
+		<input type="radio" id="ice-cream" name="spoon_type" value="HTML">
+		<span class="et_pb_image_wrap "><img loading="lazy" width="243" height="60" src="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/ice-cream_spoon-1.jpg" alt="" title="" srcset="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/ice-cream_spoon-1.jpg 943w, https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/ice-cream_spoon-1-480x120.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 943px, 100vw" class="wp-image-2185" /></span>
+		</div>
+
+		<div style="margin-left: 0%;">
+		<h4>Fruit spoon</h4>
+		<p>Approximate dimensions: 140mm</p>
+		<input type="radio" id="fruit" name="spoon_type" value="HTML">
+		<span class="et_pb_image_wrap "><img loading="lazy" width="243" height="60" src="https://www.inkermansilver.co.uk/wp-content/uploads/2019/12/fruit_spoon-1.jpg" alt="" title="" class="wp-image-2183" /></span>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>
